@@ -83,6 +83,26 @@ if ( ! function_exists( 'digital_health_blog_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'digital_health_blog_setup' );
 
+
+
+
+
+
+
+
+function digital_health_blog_add_editor_style(){
+	add_editor_style('dist/css/editor-style.css');
+}
+
+add_action('admin-init', 'digital_health_blog_add_editor_style');
+
+
+
+
+
+
+
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
