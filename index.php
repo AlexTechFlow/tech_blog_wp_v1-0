@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-	<div id="primary" class=" col-md-6"  style="border: 1px solid blue; margin: 0; width: 30%;">
+	<div id="primary" class=" col-md-6"  style="border: 1px solid blue; margin: 0; width: 30%; display: inline-block;">
 		<main id="main" class="site-main">
 
 		<?php
