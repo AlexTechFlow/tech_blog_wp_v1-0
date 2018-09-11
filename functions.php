@@ -128,7 +128,20 @@ function digital_health_blog_scripts() {
 
 	wp_enqueue_style( 'digital-health-blog-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'digital-health-blog-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+//Register a new script - popper.js
+	wp_register_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', false, '', true);
+
+	wp_enqueue_script('popper');
+
+	
+	wp_enqueue_script( 'digital-health-blog-tether', get_template_directory_uri() . '/src/js/tether.min.js', array(), '20170115', true );
+
+	wp_enqueue_script( 'digital-health-blog-bootstrap', get_template_directory_uri() . '/src/js/bootstrap.min.js', array('jquery'), '20170915', true );
+
+	wp_enqueue_script( 'digital-health-blog-bootstrap-hover', get_template_directory_uri() . '/src/js/bootstrap-hover.js', array('jquery'), '20170115', true );
+
+	wp_enqueue_script( 'digital-health-blog-nav-scroll', get_template_directory_uri() . '/src/js/nav-scroll.js', array('jquery'), '20170115', true );
+
 
 	wp_enqueue_script( 'digital-health-blog-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
