@@ -94,7 +94,7 @@ function digital_health_blog_add_editor_style(){
 	add_editor_style('dist/css/editor-style.css');
 }
 
-add_action('admin-init', 'digital_health_blog_add_editor_style');
+add_action('admin_init', 'digital_health_blog_add_editor_style');
 
 
 
