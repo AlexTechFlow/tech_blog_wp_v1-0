@@ -172,9 +172,14 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Widgets File (widgets.php).
+ * Widgets File.
  */
 require get_template_directory() . '/inc/widgets.php';
+
+/**
+ * Bootstrap Navwalker File.
+ */
+require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
 
 /**
  * Load Jetpack compatibility file.
