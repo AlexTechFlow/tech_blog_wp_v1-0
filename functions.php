@@ -123,6 +123,9 @@ add_action( 'after_setup_theme', 'digital_health_blog_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function digital_health_blog_scripts() {
+	wp_enqueue_style( 'digital-health-blog-bs-css', get_stylesheet_uri() . '/dist/css/bootstrap.min.css' ); // Bootstrap added
+	wp_enqueue_style( 'digital-health-blog-fontawesome-css', get_stylesheet_uri() . '/fonts/font-awesome/fontawesome.min.css' ); // Font Awesome added
+
 	wp_enqueue_style( 'digital-health-blog-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'digital-health-blog-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
