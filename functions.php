@@ -114,27 +114,10 @@ function digital_health_blog_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'digital_health_blog_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'digital_health_blog_content_width', 1140 );
 }
 add_action( 'after_setup_theme', 'digital_health_blog_content_width', 0 );
 
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function digital_health_blog_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'digital-health-blog' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'digital-health-blog' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'digital_health_blog_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
